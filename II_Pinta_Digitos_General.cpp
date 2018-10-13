@@ -1,34 +1,40 @@
 /*
-Sergio Campoy Maldonado, Fundamentos de ProgramaciÃ³n 1ÂºC
+Sergio Campoy Maldonado, Fundamentos de Programación 1ºC
 
-Programa que escribe los dÃ­gitos de un nÃºmero dado separados por barras "|"
+Programa que escribe los dígitos de un numero introducido separados por '|'
 */
 
 #include <iostream>
 
-#include <cmath>     // Necesaria para la potencia y el logaritmo
+#include <cmath>	//	Necesaria para la potencia
 
 using namespace std;
 
 int main () {
-   // DeclaraciÃ³n de variables
-   int n, digitos_n;
-
-   // Entrada de datos
-   do {
-      cout << "Introduce un nÃºmero entero positivo: ";
-      cin >> n;
-   } while (n < 0);
-
-   // CÃ¡lculos
-   digitos_n = log(n) / log(10) + 1;
-
-   // "Salida"
-   cout << endl << "|";
-   for (int i=1; i <= digitos_n; i++) {
-      int aux = pow (10, digitos_n - i);
-      cout << n / aux;
-      cout << "|";
-      n = n % aux;
-   }
+	//	Declaración de variables
+	int n, digito, n_aux;
+	int digitos_n = 0;	//	Variable "contador"
+	
+	//	Entrada
+	do {
+		cout << "Introduce un numero entero positivo: ";
+		cin >> n;
+	} while (n < 0);
+	
+	//	Cálculo
+		//	Cálculo de dígitos de n
+	while (n >= pow (10, digitos_n)) {
+		digitos_n ++;
+	}
+	
+		//	"Salida"
+	n_aux = n;
+	cout << endl << "|";
+	while (digitos_n != 0) {
+		digito = n_aux / pow (10, digitos_n - 1);			//	Dígito que va a pintar
+		n_aux = n_aux - digito * pow(10, digitos_n - 1);
+		
+		cout << digito << "|";
+		digitos_n --;
+	}
 }
