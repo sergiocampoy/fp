@@ -1,16 +1,16 @@
 /*
-Sergio Campoy Maldonado, Fundamentos de ProgramaciÃ³n 1ÂºC
+Sergio Campoy Maldonado, Fundamentos de Programación 1ºC
 
-Programa que escribe los divisores de un nÃºmero dado
+Programa que escribe todos los divisores de un número dado
 */
 
 #include <iostream>
-#include <cmath>     // Necesario para la raÃ­z cuadrada
+
 using namespace std;
 
 int main () {
-   // DeclaraciÃ³n de variables
-   int n;   // NÃºmero al que calcularemos los divisores
+   // Declaración de variables
+   int n;   // Número al que calcularemos los divisores
 
    // Entrada de datos
    do {
@@ -18,17 +18,12 @@ int main () {
       cin >> n;
    } while(n < 0);
 
-   // CÃ¡lculos
+   // Cálculos
    int i = 1;  // Variable que usaremos de "contador"
-   while (i <= sqrt(n)) {  /**Leer final***************************************/
+   while (i <= n) {
       if (n % i == 0) {
          cout << i << " es divisor de " << n << endl;
       }
       i++;
    }
 }
-/*
-No es necesario probar todos los nÃºmeros hasta n ya que el posible divisor mÃ¡s
-grande de 'n' serÃ­a sqrt(n). Esto reduce el nÃºmero de iteraciones
-considerablemente
-*/
