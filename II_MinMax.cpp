@@ -1,8 +1,8 @@
 /*
 Sergio Campoy Maldonado, Fundamentos de Programación 1ºC
 
-Programa que recibe números enteros y calcula el número de número recibidos,
-el máximo y el mínimo recibidos
+Programa que recibe números reales y calcula cuantos números ha recibido,
+el máximo y el mínimo
 */
 
 #include <iostream>
