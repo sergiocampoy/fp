@@ -1,3 +1,7 @@
 # Compilation files #
 #####################
 *.exe
+
+# Tests #
+#########
+*_t.cpp
