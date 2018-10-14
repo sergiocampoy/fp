@@ -16,23 +16,23 @@ int main () {
 	//	Declaración de variables
 	double dato;
 	double max, min;
-	double i = 0;	//	Variable contador
+	int i = 0;	//	Variable contador
 	
 	//	Entrada de datos
 	cout << "Introduce un número real: ";
 	cin >> dato;
 	
-	if (dato != Terminador) {
+
 	max = dato;
 	min = dato;
-	}
-	
+
 	while (dato != Terminador) {
 		i++;
 		if (dato > max)
 			max = dato;
 		if (dato < min)
 			min = dato;
+			
 		cout << "Introduce un número real: ";
 		cin >> dato;
 	}
