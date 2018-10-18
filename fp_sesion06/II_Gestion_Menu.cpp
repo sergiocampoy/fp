@@ -1,5 +1,20 @@
+/*
+Sergio Campoy Maldonado, Fundamentos de Programación 1ºC
+
+Programa que implementa un menú con 3 opciones:
+	1. Calcula el factorial de un número de forma no recursiva haciendo uso de un
+		bucle for
+	
+	2. Calcula el resultado de elevar una base a un exponente, multiplicando la
+		base tantas veces como indique el exponente en un bucle for
+	
+	3. Sale del menú y termina el programa
+*/
+
 #include <iostream>
+
 #include <cctype>
+
 using namespace std;
 
 enum class Accion
