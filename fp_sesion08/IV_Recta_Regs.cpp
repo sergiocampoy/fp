@@ -192,15 +192,12 @@ int main (void) {
 	cout << "\tx: ";
 	getline (cin, cad);
 	
-	if (cad != TERMINADOR) {
+	//	Bucle
+	while (cad != TERMINADOR) {
 		a.x = stod (cad);
 		
 		cout << "\ty: ";
 		a.y = Lee_Numero ();
-	}
-	
-	//	Bucle
-	while (cad != TERMINADOR) {
 		
 		//	Comprobación y salida
 		if (Pertenece (a, s))
@@ -217,13 +214,6 @@ int main (void) {
 	
 		cout << "\tx: ";
 		getline (cin, cad);
-		
-		if (cad != TERMINADOR) {
-			a.x = stod (cad);
-			
-			cout << "\ty: ";
-			a.y = Lee_Numero ();
-		}
 	}
 
 	return 0;
