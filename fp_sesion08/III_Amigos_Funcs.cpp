@@ -19,6 +19,12 @@ using namespace std;
 enum class Amigos
 				{tiene, tiene_fuera, no_tiene};
 
+/******************************************************************************/
+//	Función:		Lee_Natural
+//	Recibe:		string cadena: mensaje que envía al usuario
+//	Devuelve:	int n: numero natural (entero y positivo)
+/******************************************************************************/
+
 int Lee_Natural (string cadena) {
 	
 	//	Declaración de variables
@@ -34,7 +40,11 @@ int Lee_Natural (string cadena) {
 	return n;
 }
 
-
+/******************************************************************************/
+//	Función:		Suma_Divisores_Propios
+//	Recibe:		int n: Numero al cual se calculará la suma de sus divisores
+//	Devuelve:	int suma: Suma de los divisores propios de "n"
+/******************************************************************************/
 
 int Suma_Divisores_Propios (int n) {
 	
@@ -59,7 +69,13 @@ int Suma_Divisores_Propios (int n) {
 	return suma;
 }
 
-
+/******************************************************************************/
+//	Función:		Son_Amigos
+//	Recibe:		int a: candidato a número amigo nº1
+//					int b: candidato a número amigo nº2
+//	Devuelve:	TRUE: a y b son números amigos
+//					FALSE: a y b no son números amigos
+/******************************************************************************/
 
 bool Son_Amigos (int a, int b) {
 	bool amigos_ab = (Suma_Divisores_Propios (a) + 1 == b);
@@ -71,11 +87,14 @@ bool Son_Amigos (int a, int b) {
 
 
 int main (void) {
+	//	Declaración de variables
 	int a, b;
 	
+	//	Entrada de datos
 	a = Lee_Natural ("Introduce un numero natural: ");
 	b = Lee_Natural ("Introduce otro numero natural: ");
 	
+	//	Comprobación y salida
 	if (Son_Amigos (a, b)) {
 		cout << endl
 			  << a << " y " << b << " son numeros amigos"
