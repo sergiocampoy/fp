@@ -106,7 +106,7 @@ int main (void) {
 	
 	//	Salida
 	cout << "La longitud de la circunferencia es " << Longitud (circ) << endl;
-	cout << "El área del círculo es " << Area (circ) << endl;
+	cout << "El area del circulo es " << Area (circ) << endl;
 	
 	
 /******************************************************************************/
