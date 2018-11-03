@@ -11,24 +11,36 @@ número
 
 #include <iostream>
 
+#include <cmath>
+
 using namespace std;
 
-
+/******************************************************************************/
+//	Función:		Suma_Divisores
+//	Recibe:		int n: Número al que se le calculará la suma de sus divisores
+//	Devuelve:	int suma: Suma de los divisores de n (salvo n)
+/******************************************************************************/
 
 int Suma_Divisores (int n) {
+	
 	//	Declaración de constantes
-	const int TOPE = n / 2;
+	const int TOPE = floor (sqrt (n));
 	
 	//	Declaración de variables
-	int suma = 0;
+	int suma = 1;
+	double raiz = sqrt (n);
 	
 	//	Cálculos
-	for (int i = 1; i <= TOPE; i++) {
-		if ((n % i) == 0)
-			suma += i;
+	for (int i = 2; i <= TOPE; i++) {
+		if (n % i == 0) {
+			suma += i + n/i;
+		}
 	}
 	
-	//	Return
+	if (raiz == TOPE)
+	suma -= TOPE;
+	
+	
 	return suma;
 }
 

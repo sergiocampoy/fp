@@ -73,6 +73,8 @@ bool Pertenece (Punto2D a, Recta s) {
 //					"t": Coeficientes de una recta expresada en forma cartesiana
 //						  (Ax + By + C)
 //	Devuelve:	Punto del plano cartesiano (x,y) en el cual intersecan las rectas
+// PRE:			"s" ha de NO ser una recta vertical, es decir, solo funciona si
+//					s.B != 0
 /******************************************************************************/
 
 Punto2D Interseccion (Recta s, Recta t) {
@@ -171,7 +173,7 @@ int main (void) {
 	}
 	
 /******************************************************************************/
-/*Segundo Apartado*/
+/*************************Segundo Apartado*************************************/
 /******************************************************************************/	
 
 	//	Declaración de constantes
