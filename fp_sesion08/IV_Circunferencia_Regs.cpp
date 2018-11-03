@@ -16,7 +16,7 @@ Programa que:
 
 using namespace std;
 
-//	Declaración de constantes
+//	Declaración de constantes globales
 const double PI = 3.14159265358979323846;
 const string TERMINADOR = "FIN";
 
@@ -110,7 +110,7 @@ int main (void) {
 	
 	
 /******************************************************************************/
-/*Segundo apartado*/
+/**************************Segundo apartado************************************/
 /******************************************************************************/	
 	
 	//	Declaración de variables
