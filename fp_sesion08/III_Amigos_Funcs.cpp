@@ -20,12 +20,12 @@ enum class Amigos
 				{tiene, tiene_fuera, no_tiene};
 
 /******************************************************************************/
-//	Función:		Lee_Natural
+//	Función:		LeeNatural
 //	Recibe:		string cadena: mensaje que envía al usuario
 //	Devuelve:	int n: numero natural (entero y positivo)
 /******************************************************************************/
 
-int Lee_Natural (string cadena) {
+int LeeNatural (string cadena) {
 	
 	//	Declaración de variables
 	int n;
@@ -91,8 +91,8 @@ int main (void) {
 	int a, b;
 	
 	//	Entrada de datos
-	a = Lee_Natural ("Introduce un numero natural: ");
-	b = Lee_Natural ("Introduce otro numero natural: ");
+	a = LeeNatural ("Introduce un numero natural: ");
+	b = LeeNatural ("Introduce otro numero natural: ");
 	
 	//	Comprobación y salida
 	if (Son_Amigos (a, b)) {
@@ -117,7 +117,7 @@ int main (void) {
 	Amigos amigo;
 	
 	//	Entrada de datos
-	n = Lee_Natural ("Introuce otro numero natural: ");
+	n = LeeNatural ("Introuce otro numero natural: ");
 	
 	//	Cálculos
 	radio = n / 3;

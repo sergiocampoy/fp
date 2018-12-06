@@ -9,7 +9,7 @@ descendente, o no están ordenados
 
 using namespace std;
 
-enum Orden
+enum class Orden
 		{ascendente, descendente, desordenado};
 
 int main () {

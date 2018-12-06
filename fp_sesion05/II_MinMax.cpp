@@ -38,9 +38,13 @@ int main () {
 	}
 	
 	//	Salida
-	cout << endl
-		  << "La entrada ha terminado" << endl << endl;
-	cout << "\tSe han introducido " << i << " datos" << endl;
-	cout << "\tEl maximo ha sido " << max << endl;
-	cout << "\tEl minimo ha sido " << min << endl << endl;
+	if (i != 0) {
+		cout << endl
+			  << "La entrada ha terminado" << endl << endl;
+		cout << "\tSe han introducido " << i << " datos" << endl;
+		cout << "\tEl maximo ha sido " << max << endl;
+		cout << "\tEl minimo ha sido " << min << endl << endl;
+	}
+	else
+		cout << "No se han introducido datos." << endl;
 }

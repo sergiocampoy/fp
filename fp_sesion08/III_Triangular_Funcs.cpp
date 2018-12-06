@@ -12,13 +12,13 @@ dado por el usuario
 using namespace std;
 
 /******************************************************************************/
-//	Función: 	N_Esimo_Triangular
+//	Función: 	EnesimoTriangular
 //	Recibe:		int n: Se calculará el numero triangular nº n
 //	Devuelve:	int suma: enésimo número triangular
 //PRE:			n > 0
 /******************************************************************************/
 
-int N_Esimo_Triangular (int n) {
+int EnesimoTriangular (int n) {
 	
 	//	Declaración de variables
 	int suma = 0;
@@ -43,7 +43,7 @@ int main (void) {
 		cin >> n;
 	} while (n <= 0);
 	
-	triangular = N_Esimo_Triangular (contador);
+	triangular = EnesimoTriangular (contador);
 	
 	cout << "Los siguientes numeros triangulares son menores que " << n << ":"
 		  << endl;
@@ -51,7 +51,7 @@ int main (void) {
 	while (triangular < n) {
 		cout << "\t" << triangular << endl;
 		contador++;
-		triangular = N_Esimo_Triangular (contador);
+		triangular = EnesimoTriangular (contador);
 	}
 	
 	return 0;

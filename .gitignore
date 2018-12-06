@@ -5,3 +5,6 @@
 # Tests #
 #########
 *_t.cpp
+
+# Scripts #
+*.pdf

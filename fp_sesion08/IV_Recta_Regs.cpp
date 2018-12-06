@@ -40,13 +40,13 @@ struct Recta {
 //	Funciones
 
 /******************************************************************************/
-//	Función:		Lee_Numero
+//	Función:		LeeNumero
 //	Recibe:		void
 //	Devuelve:	Un double leído con getline (cin, n) para evitar problemas con el
 //					buffer del teclado
 /******************************************************************************/
 
-double Lee_Numero () {
+double LeeNumero () {
 	string n;
 	getline (cin, n);
 	
@@ -112,22 +112,22 @@ int main (void) {
 	cout << "Introduce los parametros de la recta s: " << endl;
 	
 	cout << "\tA: ";
-	s.A = Lee_Numero ();
+	s.A = LeeNumero ();
 	cout << "\tB: ";
-	s.B = Lee_Numero ();
+	s.B = LeeNumero ();
 	cout << "\tC: ";
-	s.C = Lee_Numero ();
+	s.C = LeeNumero ();
 	
 	cout << endl
 		  << "Introduce los parametros de la recta t: "
 		  << endl;
 	
 	cout << "\tA: ";
-	t.A = Lee_Numero ();
+	t.A = LeeNumero ();
 	cout << "\tB: ";
-	t.B = Lee_Numero ();
+	t.B = LeeNumero ();
 	cout << "\tC: ";
-	t.C = Lee_Numero ();
+	t.C = LeeNumero ();
 	
 	
 	//	Comprobación de la posición relativa de la recta
@@ -199,7 +199,7 @@ int main (void) {
 		a.x = stod (cad);
 		
 		cout << "\ty: ";
-		a.y = Lee_Numero ();
+		a.y = LeeNumero ();
 		
 		//	Comprobación y salida
 		if (Pertenece (a, s))

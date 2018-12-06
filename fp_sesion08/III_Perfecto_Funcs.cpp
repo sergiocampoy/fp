@@ -16,12 +16,12 @@ número
 using namespace std;
 
 /******************************************************************************/
-//	Función:		Suma_Divisores
+//	Función:		SumaDivisores
 //	Recibe:		int n: Número al que se le calculará la suma de sus divisores
 //	Devuelve:	int suma: Suma de los divisores de n (salvo n)
 /******************************************************************************/
 
-int Suma_Divisores (int n) {
+int SumaDivisores (int n) {
 	
 	//	Declaración de constantes
 	const int TOPE = floor (sqrt (n));
@@ -59,7 +59,7 @@ int main (void) {
 	a = n;
 	
 	//	Cálculo
-	while (Suma_Divisores (a) != a) {
+	while (SumaDivisores (a) != a) {
 		a--;
 	}
 	

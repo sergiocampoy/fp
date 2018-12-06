@@ -30,13 +30,13 @@ struct Circunferencia {
 };
 
 /******************************************************************************/
-//	Función:		Lee_Numero
+//	Función:		LeeNumero
 //	Recibe:		void
 //	Devuelve:	Un double leído con getline (cin, n) para evitar problemas con el
 //					buffer del teclado
 /******************************************************************************/
 
-double Lee_Numero () {
+double LeeNumero () {
 	string n;
 	getline (cin, n);
 	
@@ -74,14 +74,14 @@ double Area (Circunferencia circ) {
 }
 
 /******************************************************************************/
-//	Función:		Contiene_Punto
+//	Función:		ContienePunto
 //	Recibe:		"p" Punto2D
 //					"circ" Circunferencia
 //	Devuelve:	"TRUE" si la circunferencia contiene a "p"
 //					"FALSE" si la circunferencia NO contiene a "p"
 /******************************************************************************/
 
-bool Contiene_Punto (Punto2D p, Circunferencia circ) {
+bool ContienePunto (Punto2D p, Circunferencia circ) {
 	double distancia_cuadrado;
 	
 	distancia_cuadrado = Cuadrado (circ.centro.x - p.x)
@@ -97,12 +97,12 @@ int main (void) {
 	//	Entrada
 	cout << "Introduce el centro de la circunferencia (x, y)" << endl;
 	cout << "\tx: ";
-	circ.centro.x = Lee_Numero ();
+	circ.centro.x = LeeNumero ();
 	cout << "\ty: ";
-	circ.centro.y = Lee_Numero ();
+	circ.centro.y = LeeNumero ();
 	
 	cout << "Introduce el radio de la circunferencia: ";
-	circ.radio = Lee_Numero ();
+	circ.radio = LeeNumero ();
 	
 	//	Salida
 	cout << "La longitud de la circunferencia es " << Longitud (circ) << endl;
@@ -132,9 +132,9 @@ int main (void) {
 		p.x = stod (cad);
 		
 		cout << "\ty: ";
-		p.y = Lee_Numero ();
+		p.y = LeeNumero ();
 		
-		if (Contiene_Punto (p, circ))
+		if (ContienePunto (p, circ))
 			cout << "El punto (" << p.x << ", " << p.y << ")"
 				  << " SI pertenece a la circunferencia"
 				  << endl;

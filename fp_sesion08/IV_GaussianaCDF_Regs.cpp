@@ -3,7 +3,10 @@ Sergio Campoy Maldonado
 Fundamentos de Programación
 1ºC
 
-
+Programa que:
+	1)	Lee los parámetros de la función gaussiana
+	2)	Muestra los valores de x, g(x) y CDF(x)
+	3)	Pregunta si desea continuar y vuelve a paso 1
 */
 
 #include <iostream>
@@ -25,12 +28,12 @@ struct Gaussiana {
 };
 
 /******************************************************************************/
-//	Función:		Valor_x
+//	Función:		FuncionGaussiana
 //	Recibe:		"campana" del tipo Gaussiana
 //	Devuelve:	Imagen de la función en el punto x (double)
 /******************************************************************************/
 
-double Valor_x (Gaussiana campana) {
+double FuncionGaussiana (Gaussiana campana) {
 	double base, exponente;
 	
 	base = 1 / (campana.desv * sqrt (2*PI));
@@ -40,7 +43,7 @@ double Valor_x (Gaussiana campana) {
 }
 
 /******************************************************************************/
-//	Función: 	Funcion_CDF
+//	Función: 	FuncionCDF
 //	Recibe:		"campana" del tipo Gaussiana
 //	Devuelve:	Área de la función hasta el valor de x (double)
 
@@ -48,7 +51,7 @@ double Valor_x (Gaussiana campana) {
 //					campana.desv = 1
 /******************************************************************************/
 
-double Funcion_CDF (Gaussiana campana) {
+double FuncionCDF (Gaussiana campana) {
 	
 	//	Declaración de constantes
 	const double b0 = 0.2316419, 	 b1 = 0.319381530,  b2 = -0.356563782,
@@ -58,7 +61,7 @@ double Funcion_CDF (Gaussiana campana) {
 	double w, t = 1.0 / (1 + b0 * abs (campana.x));
 	
 	//	Cálculos
-	w = 1 - Valor_x (campana) *
+	w = 1 - FuncionGaussiana (campana) *
 		(b1*t + b2*pow(t, 2) + b3*pow(t, 3) + b4*pow(t, 4) + b5*pow(t, 5));
 	
 	if (campana.x < 0)
@@ -101,10 +104,10 @@ int main () {
 		
 		for (gauss.x = lim_inf; gauss.x <= lim_sup; gauss.x += gauss.desv/2) {
 			cout << "\tx = " << gauss.x;
-			cout << "\tg (x) = " << Valor_x (gauss);
+			cout << "\tg (x) = " << FuncionGaussiana (gauss);
 			
 			if (estandar)
-				cout << "\t\tCDF (x) = " << Funcion_CDF (gauss);
+				cout << "\t\tCDF (x) = " << FuncionCDF (gauss);
 			
 			cout << endl;
 		}

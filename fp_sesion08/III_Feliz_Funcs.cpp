@@ -1,5 +1,16 @@
+/*
+Sergio Campoy Maldonado
+Fundamentos de Programación
+1ºC
+
+Programa que comprueba si un número n es feliz para un grado k dado por el
+usuario
+*/
+
 #include <iostream>
+
 #include <string>
+
 using namespace std;
 
 /******************************************************************************/
@@ -13,44 +24,44 @@ double Cuadrado (double x) {
 }
 
 /******************************************************************************/
-//	Función:		Cuenta_Cifras
+//	Función:		CuentaCifras
 //	Recibe:		int n: Número al que se le contarán las cifras
 //	Devuelve:	nº de cifras del número n
 /******************************************************************************/
 
-int Cuenta_Cifras (int n) {
+int CuentaCifras (int n) {
 	return ((to_string (n)).length());
 }
 
 /******************************************************************************/
-//	Función: 	Digito_n
+//	Función: 	EnesimoDigito
 //	Recibe:		int pos:	Posición en la que se encuentra el dígito que queremos
 //					int n:	Número del cual se va a "extraer" el dígito
 //	Devuelve:	El dígito en la posición "pos" del número "n"
 //	PRE:			pos <= Cuenta_Cifas (n)
 /******************************************************************************/
 
-int Digito_n (int pos, int n) {
+int EnesimoDigito (int pos, int n) {
 	string cad = to_string (n);
 	
 	return (cad.at (pos - 1) - '0');
 }
 
 /******************************************************************************/
-//	Función: 	Es_Feliz
+//	Función: 	EsFeliz
 //	Recibe:		int n:	Número a comprobar si es feliz
 //					int k:	Grado máximo a comprobar
 //	Devuelve:	TRUE:		Si n es un número feliz de grado k
 //					FALSE:	Si n no es un número feliz de grado k
 /******************************************************************************/
 
-bool Es_Feliz (int n, int k) {
+bool EsFeliz (int n, int k) {
 	//	Declaración de variables
 	int suma = 0;
 
 	//	Cálculo
-	for (int i = 1; i <= Cuenta_Cifras (n); i++) {
-		suma += Cuadrado (Digito_n (i, n));
+	for (int i = 1; i <= CuentaCifras (n); i++) {
+		suma += Cuadrado (EnesimoDigito (i, n));
 	}
 
 	if (suma == 1)
@@ -58,7 +69,7 @@ bool Es_Feliz (int n, int k) {
 	else if (k == 1)
 		return false;
 	else
-		return (Es_Feliz (suma, k-1));
+		return (EsFeliz (suma, k-1));
 }
 
 
@@ -80,7 +91,7 @@ int main (void) {
 	
 	
 	//	Salida
-	if (Es_Feliz (n, k))
+	if (EsFeliz (n, k))
 		cout << endl
 			  << n << " es un numero feliz de grado " << k
 			  << endl << endl;

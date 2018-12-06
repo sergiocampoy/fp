@@ -44,12 +44,12 @@ double Cuadrado (double x) {
 }
 
 /******************************************************************************/
-//	Función:		Area_Rectangulo
+//	Función:		AreaRectangulo
 //	Recibe:		Rectangulo rect
 //	Devuelve:	Área del rectángulo (base x altura)
 /******************************************************************************/
 
-double Area_Rectangulo (Rectangulo rect) {
+double AreaRectangulo (Rectangulo rect) {
 	//	Declaración de variables
 	double base, altura;
 	
@@ -62,23 +62,23 @@ double Area_Rectangulo (Rectangulo rect) {
 }
 
 /******************************************************************************/
-//	Función:		Area_Circulo
+//	Función:		AreaCirculo
 //	Recibe:		Circunferencia circ
 //	Devuelve:	Área del círculo (PI * r^2)
 /******************************************************************************/
 
-double Area_Circulo (Circunferencia circ) {
+double AreaCirculo (Circunferencia circ) {
 	return (PI * circ.radio * circ.radio);
 }
 
 /******************************************************************************/
-//	Función:		Centro_Recangulo
+//	Función:		CentroRectangulo
 //	Recibe:		Rectangulo rect
 //	Devuelve:	Punto2D centro (intersección de las diagonales del rectángulo)
 /******************************************************************************/
 
 
-Punto2D Centro_Rectangulo (Rectangulo rect) {
+Punto2D CentroRectangulo (Rectangulo rect) {
 	//	Declaración de variables
 	Punto2D centro;
 	
@@ -119,10 +119,10 @@ int main (void) {
 	} while (rect.p_id.y >= rect.p_si.y);
 	
 	//	Cálculo
-	circ.centro = Centro_Rectangulo (rect);
+	circ.centro = CentroRectangulo (rect);
 	circ.radio = RADIO_INI;
 	
-	while (Area_Circulo (circ) < Area_Rectangulo (rect)) {
+	while (AreaCirculo (circ) < AreaRectangulo (rect)) {
 		circ.radio += INCREMENTO;
 	}
 	
